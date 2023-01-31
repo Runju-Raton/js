@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Immer Js</h1>
+    <script src="https://cdn.jsdelivr.net/npm/immer"></script>
+    <script>
+        const initialState = {
+            name: 'Runju Raton',
+            address:{
+                street:'123 Main st.',
+                city: 'Dhanmondi',
+                state: 'Bangladesh'
+            }
+        }
+         // newState.address.street = '456 Second st.' wriong initial state is also changed
+        const newState ={
+            ...initialState,
+            address:{
+                ...initialState.address,
+                street: '456 Second st.'
+            }
+        }
+       
+        const immerState = immer.produce(initialState,(draft)=>{
+            draft.address.street = '789 Third st.'
+        });
+
+        console.log(initialState);
+        console.log(newState);
+        console.log(immerState);
+    </script>
+</body>
+</html>

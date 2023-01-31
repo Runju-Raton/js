@@ -12,3 +12,6 @@ var c=10;
 
 var calMax = (a>b)?((a>c)?"a is max":"c is max"):((b>c)?"b is max":"c is max");
 console.log(calMax)
+var numbers=undefined;
+console.log(numbers?.map(()=>'Runju Raton'))
+console.log(undefined)

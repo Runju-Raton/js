@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="divFamily"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://shrihari-lib.netlify.app/lineage.min.js"></script>
+    <script>
+        var jsonData = [{"id":3,"pid":4,"fid":1,"gender":"male","title":"Father","name":"Asad Ullah Khan","photo":"","addr":"","cn":""},{"id":4,"pid":3,"gender":"female","title":"Mother","name":"Nasima Begum","photo":"","addr":"","cn":""},{"id":5,"pid":6,"mid":4,"fid":3,"gender":"female","title":"Sister","name":"Suchi","photo":"","addr":"","cn":""},{"id":6,"pid":5,"gender":"male","title":"Brother-in-Law","name":"Rasel","photo":"","addr":"","cn":""},{"id":1,"pid":2,"gender":"male","title":"Grand Father","name":"Nurul Hossen Khan","photo":"","addr":"","cn":""},{"id":2,"pid":1,"gender":"female","title":"Grand Mother","name":"Tahera Khatun","photo":"","addr":"","cn":""},{"id":7,"mid":4,"fid":3,"pid":8,"gender":"male","title":"My Self","name":"Maknul Hasan Khan Nasim","photo":"","addr":"","cn":""},{"id":8,"pid":7,"fid":11,"mid":12,"gender":"female","title":"Wife","name":"Jakia Sultana","photo":"","addr":"","cn":""},{"id":9,"fid":7,"gender":"male","title":"Son","name":"Labeed Hasan","photo":"","addr":"","cn":""},{"id":10,"fid":7,"gender":"female","title":"Daughter","name":"Laybah","photo":"","addr":"","cn":""},{"id":11,"pid":12,"gender":"male","title":"Father In Law","name":"Abdur Rouf","photo":"","addr":"","cn":""},{"id":12,"pid":11,"gender":"female","title":"Mother In Law","name":"Hena","photo":"","addr":"","cn":""},{"id":13,"fid":1,"gender":"male","title":"Uncle","name":"Monsur Ahmed Khan","photo":"","addr":"","cn":""},{"id":15,"pid":13,"gender":"female","title":"Uncle's Wife","name":"Uncle's Wife","photo":"","addr":"","cn":""},{"id":14,"fid":1,"gender":"female","title":"Aunty","name":"Mutahara","photo":"","addr":"","cn":""},{"id":16,"pid":14,"gender":"male","title":"Aunty's Husband","name":"Aunty's Husband","photo":"","addr":"","cn":""}];
+var params = {
+                data: jsonData, /*Local variable or file path*/
+                search: true, //false
+                container: "divFamily",
+                template: "circle" // "rounded" // "raised" // "tilted"
+            };
+            var tree = new Lineage(params);
+            tree.load();
+    </script>
+</body>
+</html>
